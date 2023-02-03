@@ -9,7 +9,7 @@
   "scripts": {
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "eject": "react-scripts eject",
     "preinstall": "npx npm-force-resolutions"
   },
