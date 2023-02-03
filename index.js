@@ -34,8 +34,9 @@ app.use("/api/auth", userRoutes);
 
 const io = socket(server,{
     cors:{
-        origin:process.env.ORIGIN,
-        // origin:"http://localhost:3000",
+        
+        // origin:process.env.ORIGIN,
+        origin:"http://localhost:3000",
         Credentials: true,
     },
 });
