@@ -13,9 +13,11 @@ app.use(express.json());
 
 app.use("/api/auth",userRoutes);
 
+mongoose.set("strictQuery",false);
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    
     
 }).then(()=>{
     console.log("DB connection successfully");
@@ -35,8 +37,8 @@ app.use("/api/auth", userRoutes);
 const io = socket(server,{
     cors:{
         
-        // origin:process.env.ORIGIN,
-        origin:"http://localhost:3000",
+        origin:process.env.ORIGIN,
+        // origin:"http://localhost:3000",
         Credentials: true,
     },
 });
